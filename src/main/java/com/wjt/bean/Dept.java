@@ -7,6 +7,10 @@ public class Dept {
         this.dname = dname;
     }
 
+    public String getDname() {
+        return dname;
+    }
+
     @Override
     public String toString() {
         return "Dept{" +

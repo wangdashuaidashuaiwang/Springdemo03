@@ -12,6 +12,7 @@
 
 <!--        级联赋值-->
         <property name="dept" ref="dept"></property>
+        <property name="dept.dname" value="jishubu"></property>
     </bean>
     <bean id="dept" class="com.wjt.bean.Dept">
         <property name="dname" value="hanbaobu"></property>

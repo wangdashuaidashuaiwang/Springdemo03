@@ -6,6 +6,10 @@ public class Emp {
     //员工属于某一个部门，使用对象形式表示
     private Dept dept;
 
+    public Dept getDept() {
+        return dept;
+    }
+
     public void setDept(Dept dept) {
         this.dept = dept;
     }
