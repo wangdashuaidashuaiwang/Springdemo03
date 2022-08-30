@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stu" class="com.wjt.collectiontype.Stu">
+<!--    集合类型属性注入    -->
+        <property name="courses">
+            <array>
+                <value>java课</value>
+                <value>oracle</value>
+
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>wjt</value>
+                <value>yjx</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="JAVA" value="java"></entry>
+                <entry key="PHP" value="php"></entry>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>Mysql</value>
+                <value>redis</value>
+            </set>
+        </property>
+
+    </bean>
+</beans>
