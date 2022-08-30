@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<!--内部bean-->
+    <bean id="emp" class="com.wjt.bean.Emp">
+<!--        设置两个普通的属性-->
+        <property name="ename" value="wds"></property>
+        <property name="gender" value="male"></property>
+<!--        设置对象属性-->
+
+
+<!--        级联赋值-->
+        <property name="dept" ref="dept"></property>
+    </bean>
+    <bean id="dept" class="com.wjt.bean.Dept">
+        <property name="dname" value="hanbaobu"></property>
+    </bean>
+</beans>

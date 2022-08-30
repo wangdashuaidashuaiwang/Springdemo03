@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.wjt.User"></bean>
+
+    <bean id="book" class="com.wjt.Book">
+        <!--   使用property完成属性注入 -->
+<!--     name 类的属性名称    value 向属性注入的值   -->
+        <property name="bname" value="wjtsbook"></property>
+        <property name="author" value="wjt"></property>
+<!--&lt;!&ndash;        null值&ndash;&gt;-->
+<!--        <property name="address">-->
+<!--            <null></null>-->
+<!--        </property>-->
+
+
+
+<!--     属性值包括特殊符号
+    1 把特殊符号进行转义
+    2. 把特殊符号内容写到cdate
+
+ -->
+        <property name="address">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+
+    <bean id="orders" class="com.wjt.Orders">
+        <constructor-arg name="address" value="cn"></constructor-arg>
+        <constructor-arg name="oname" value="computer"></constructor-arg>
+    </bean>
+
+<!--    <bean id="book" class="com.wjt.Book" p:bname="豆包的书" p:author="豆包">-->
+<!--    </bean>-->
+
+
 
 </beans>
