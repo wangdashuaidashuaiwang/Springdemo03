@@ -1,6 +1,7 @@
 package com.wjt;
 
 import com.wjt.bean.Emp;
+import com.wjt.collectiontype.Book01;
 import com.wjt.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -25,6 +26,12 @@ public class TestBean {
         Emp emp = context.getBean("emp", Emp.class);
         emp.testPrintsth();
 
+    }
+    @Test
+    public void testBook(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean6.xml");
+        Book01 book01 = context.getBean("book01", Book01.class);
+        book01.tsBook01();
     }
 
 

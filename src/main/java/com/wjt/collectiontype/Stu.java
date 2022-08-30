@@ -15,6 +15,16 @@ public class Stu {
     //set类型属性
     private Set<String> set;
 
+    private List<Course> courseList;//生成多门课程
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
+
     public Set<String> getSet() {
         return set;
     }
@@ -52,6 +62,7 @@ public class Stu {
         System.out.println(set);
         System.out.println(list);
         System.out.println(Arrays.toString(courses));
+        System.out.println(courseList);
     }
 
 }
